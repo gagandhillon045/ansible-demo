@@ -1,7 +1,7 @@
 # initialize the database
 airflow db init
 
-airflow users create \
+sudo airflow users create \
     --username admin \
     --firstname Peter \
     --lastname Parker \
