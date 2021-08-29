@@ -1,0 +1,30 @@
+---
+- name: Update web servers
+  hosts: UBU
+
+  tasks:
+
+  #make sure to do apt-get update inorder to install pip3 first time other it will not got through
+
+
+  - name: Ensure python3 present
+    ansible.builtin.apt:
+      name: python3
+
+  - name: Ensure pip present
+    ansible.builtin.apt:
+      name: python3-pip
+
+  - name: Transfer the preperation script
+    copy: src=../scripts/prepare-airflow-env.sh dest=/home mode=0777
+
+  - name: Transfer the lauch script
+    copy: src=../scripts/launch-airflow.sh dest=/home mode=0777      
+
+  - name: Execute the preperation script
+    command: sh /home/prepare-airflow-env.sh
+
+
+  - name: Execute the lauch script
+    command: sh /home/launch-airflow.sh
+  
