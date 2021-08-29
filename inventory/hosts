@@ -1,5 +1,5 @@
 [UBU]
-one ansible_host=ec2-3-138-196-140.us-east-2.compute.amazonaws.com
+one ansible_host=ec2-13-58-200-59.us-east-2.compute.amazonaws.com
 one ansible_user=ubuntu
 one ansible_connection=ssh
 one ansible_become=true
