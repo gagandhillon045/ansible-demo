@@ -23,8 +23,8 @@
   - name: Transfer the lauch script
     copy: src=../scripts/launch-airflow.sh dest=/home mode=0777      
 
-  - name: Transfer the lauch script
-    copy: src=../scripts/create-user.sh dest=/home mode=0777     
+  #- name: Transfer the create user script
+  #  copy: src=../scripts/create-user.sh dest=/home mode=0777     
 
   - name: Execute the preperation script
     command: sh /home/prepare-airflow-env.sh
@@ -32,6 +32,6 @@
   - name: Execute the lauch script
     command: sh /home/launch-airflow.sh
 
-  - name: Execute the create-user script
-    command: sh /home/create-user.sh  
+  # - name: Execute the create-user script
+  #  command: sh /home/create-user.sh  
   
