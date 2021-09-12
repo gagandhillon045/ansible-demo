@@ -5,7 +5,7 @@
   tasks:
 
   #make sure to do apt-get update inorder to install pip3 first time other it will not got through
-
+  #this script only runs on UBUNTU Ubuntu Server 20.04 LTS (HVM), SSD Volume Type - ami-00399ec92321828f5 (64-bit x86) / ami-08e6b682a466887dd (64-bit Arm)
   - name: Update apt repo and cache on all Debian/Ubuntu boxes
     apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
 

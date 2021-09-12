@@ -5,7 +5,6 @@
 
 sudo apt-get install -y --no-install-recommends \
         freetds-bin \
-        krb5-user \
         ldap-utils \
         libffi6 \
         libsasl2-2 \

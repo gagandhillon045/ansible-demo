@@ -6,7 +6,7 @@ sudo airflow users create \
     --firstname Peter \
     --lastname Parker \
     --role Admin \
-    --password admin
+    --password admin \
     --email spiderman@superhero.org
 
 # start the web server, default port is 8080

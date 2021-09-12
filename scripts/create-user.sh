@@ -5,5 +5,5 @@ sudo airflow users create \
     --firstname somename \
     --lastname somename \
     --role Admin \
-    --password somename
+    --password somename \
     --email somename@superhero.org
