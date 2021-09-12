@@ -14,7 +14,7 @@ sudo airflow webserver --port 80
 
 # start the scheduler
 # open a new terminal or else run webserver with ``-D`` option to run it as a daemon
-sudo airflow scheduler
+# sudo airflow scheduler
 
 # visit localhost:8080 in the browser and use the admin account you just
 # created to login. Enable the example_bash_operator dag in the home page
