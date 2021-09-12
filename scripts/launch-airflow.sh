@@ -10,7 +10,7 @@ sudo airflow users create \
     --email spiderman@superhero.org
 
 # start the web server, default port is 8080
-sudo airflow webserver --port 80
+sudo airflow webserver -D --port 80
 
 # start the scheduler
 # open a new terminal or else run webserver with ``-D`` option to run it as a daemon
