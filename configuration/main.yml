@@ -16,22 +16,27 @@
   - name: Ensure pip present
     ansible.builtin.apt:
       name: python3-pip
-
-  - name: Transfer the preperation script
-    copy: src=../scripts/prepare-airflow-env.sh dest=/home mode=0777
-
+  - name: Airflow preparation
+    apt:
+      name: "{{ item }}"
+      state: present
+    loop:
+      - freetds-bin
+      - ldap-utils
+      - libsasl2-2
+      - libsasl2-modules
+      - libssl1.1
+      - locales
+      - lsb-release
+      - sasl2-bin
+      - sqlite3
+      - unixodbc  
+              
   - name: Transfer the lauch script
     copy: src=../scripts/launch-airflow.sh dest=/home mode=0777      
 
   #- name: Transfer the create user script
   #  copy: src=../scripts/create-user.sh dest=/home mode=0777     
-
-  - name: Execute the preperation script
-    command: sh /home/prepare-airflow-env.sh
-
   - name: Execute the lauch script
     command: sh /home/launch-airflow.sh
 
-  # - name: Execute the create-user script
-  #  command: sh /home/create-user.sh  
-  
